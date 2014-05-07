@@ -7,15 +7,11 @@ echo "Updating rbenv..."
 cd ~/.rbenv
 git pull
 
-########################
-# Plugin updates below #
-########################
-
-echo "Updating ruby-build plugin..."
-cd ~/.rbenv/plugins/ruby-build
-git pull
-
-
-echo "Updating rbenv-gem-rehash plugin..."
-cd ~/.rbenv/plugins/rbenv-gem-rehash
-git pull
+##################
+# Plugin updates #
+##################
+echo "Updating rbenv plugins..."
+for d in ~/.rbenv/plugins/*; do
+  cd $d
+  git pull
+done
