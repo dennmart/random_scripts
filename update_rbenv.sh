@@ -5,7 +5,7 @@
 ################
 echo "Updating rbenv..."
 cd ~/.rbenv
-git pull
+git pull -q
 
 ##################
 # Plugin updates #
@@ -13,5 +13,5 @@ git pull
 echo "Updating rbenv plugins..."
 for d in ~/.rbenv/plugins/*; do
   cd $d
-  git pull
+  git pull -q
 done
